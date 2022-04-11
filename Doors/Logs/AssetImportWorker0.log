@@ -165,3 +165,107 @@ Received Import Request.
   path: Assets/Scenes/Main scene.unity
   artifactKey: Guid(b4b41762d9abc4fdc9805d58a2f1751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Main scene.unity using Guid(b4b41762d9abc4fdc9805d58a2f1751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1373451338daace658039ca3f334f32') in 0.007898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 667.778316 seconds.
+  path: Assets/StylizedHandPaintedDungeon(Free)/Demo
+  artifactKey: Guid(9669ff7bf5e8fe546b575a798960b0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedHandPaintedDungeon(Free)/Demo using Guid(9669ff7bf5e8fe546b575a798960b0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2709b5206134bcaf0a5d168536ab472b') in 0.003339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.857299 seconds.
+  path: Assets/StylizedHandPaintedDungeon(Free)/Demo/Demo_Scene/Demo_Scene.unity
+  artifactKey: Guid(1c6d75eaa80797041a20dd6a10c1f6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedHandPaintedDungeon(Free)/Demo/Demo_Scene/Demo_Scene.unity using Guid(1c6d75eaa80797041a20dd6a10c1f6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f2a7c4276e693717d20de6eb343928') in 0.014288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.040096 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b79a01ab3b98ee9b269b33d9884f5a1') in 0.009720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.861892 seconds.
+  path: Assets/StylizedHandPaintedDungeon(Free)/Demo/Demo_Scene/Demo_Scene
+  artifactKey: Guid(96e2fd27c7677f740af43c2b41a0e643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedHandPaintedDungeon(Free)/Demo/Demo_Scene/Demo_Scene using Guid(96e2fd27c7677f740af43c2b41a0e643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1fff2729c16e072c1d2019e63cee5e') in 0.010550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.070489 seconds.
+  path: Assets/StylizedHandPaintedDungeon(Free)/Demo/Assets_Preview
+  artifactKey: Guid(b2763044381781f4d88d7583ce7015d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedHandPaintedDungeon(Free)/Demo/Assets_Preview using Guid(b2763044381781f4d88d7583ce7015d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ad13733ec6befc92253881dcd22fab') in 0.002592 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.773281 seconds.
+  path: Assets/StylizedHandPaintedDungeon(Free)/Demo/Assets_Preview/Assets_Preview.unity
+  artifactKey: Guid(6f93acd388e1d2549aa45617fe3f6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedHandPaintedDungeon(Free)/Demo/Assets_Preview/Assets_Preview.unity using Guid(6f93acd388e1d2549aa45617fe3f6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eac332b96da3a4fff54824f4d40c8247') in 0.011105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 75.038679 seconds.
+  path: Assets/StylizedHandPaintedDungeon(Free)/Materials
+  artifactKey: Guid(3439d4b01c88d534ba58886b46cca809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedHandPaintedDungeon(Free)/Materials using Guid(3439d4b01c88d534ba58886b46cca809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c10f0ca67c25e45142244a1840f67a') in 0.002994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.947559 seconds.
+  path: Assets/StylizedHandPaintedDungeon(Free)
+  artifactKey: Guid(79fb32a2e81d9480f9f9eb12af6d6a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedHandPaintedDungeon(Free) using Guid(79fb32a2e81d9480f9f9eb12af6d6a5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0600343d1845d2ec9f84447798d25682') in 0.002300 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004487 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.069 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3073ms)
+		BeginReloadAssembly (484ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (200ms)
+		EndReloadAssembly (2393ms)
+			LoadAssemblies (361ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (930ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (135ms)
+			SetupLoadedEditorAssemblies (781ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (229ms)
+				ProcessInitializeOnLoadAttributes (511ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1496 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.4 MB.
+System memory in use after: 174.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1980.
+Total: 4.104084 ms (FindLiveObjects: 0.229944 ms CreateObjectMapping: 0.076121 ms MarkObjects: 3.754981 ms  DeleteObjects: 0.041839 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: b23960f63f64bdc6ff669e2cdcee2391 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
