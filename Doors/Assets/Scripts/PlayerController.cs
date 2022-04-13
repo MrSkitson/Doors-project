@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     float verticalMovement;
     
     Vector3 moveDirection;
-
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -63,10 +62,14 @@ public class PlayerController : MonoBehaviour
     {
         var speed = 0.01f;
         if (Input.GetKey(KeyCode.Q))
-      transform.Rotate(Vector3.right, speed * Time.deltaTime);
-     
-  if (Input.GetKey(KeyCode.E))
-      transform.Rotate(-Vector3.right, speed * Time.deltaTime);
+        {
+      //transform.Rotate(Vector3.right, speed * Time.deltaTime);
     }
 
+     
+    if (Input.GetKey(KeyCode.E))
+      {//transform.Rotate(-Vector3.right, speed * Time.deltaTime);
+
+    }
+    }
 }
