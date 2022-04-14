@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     
         MyInput();
         ControlDrag();
-        //RotatePlayer();
+        RotatePlayer();
     }
 
     void MyInput()
@@ -63,7 +63,9 @@ public class PlayerController : MonoBehaviour
         var speed = 0.01f;
         if (Input.GetKey(KeyCode.Q))
         {
-      //transform.Rotate(Vector3.right, speed * Time.deltaTime);
+            rb.freezeRotation = false;
+      transform.Rotate(Vector3.right, speed * Time.deltaTime);
+
     }
 
      

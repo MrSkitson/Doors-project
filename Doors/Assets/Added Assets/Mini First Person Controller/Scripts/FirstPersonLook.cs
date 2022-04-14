@@ -9,7 +9,7 @@ public class FirstPersonLook : MonoBehaviour
 
     Vector2 velocity;
     Vector2 frameVelocity;
-    bool CursorLocked = true;
+    //bool CursorLocked = true;
 
     void Reset()
     {

@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
+#if UNITY_EDITOR
+using UnityEditor;
+using System.IO;
+#endif
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     public  GameObject Player, Chest;
     Vector3 spawnPos;
     public TextMeshProUGUI timeText;
@@ -14,32 +20,79 @@ public class GameManager : MonoBehaviour
      public Button restartButton; 
      public GameObject gameOverScreen;
      public Button startButton;
-
-
-    private int timer = 0;
+    public GameObject chestScreen;
+    public bool ChestIsOpen;
+    public int hightScore = 10;
+    public Text hightScoreText;
+    private bool m_GameOver;
+    private bool OpenDoor;
+    private int timer;
     private float spawnRange = 4.0f;
     public bool isGameActive;
+[System.Serializable]
+    class SaveData
+    {
+        public int hightScore;
+        
+    }
+
+// save data json
+public void SaveInput()
+{
+    SaveData data = new SaveData();
+    data.hightScore = hightScore;
+    string json = JsonUtility.ToJson(data);
+    File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+}
+// load data json
+public void LoadInput()
+{
+    string path = Application.persistentDataPath + "/savefile.json";
+    if (File.Exists(path))
+    {
+        string json = File.ReadAllText(path);
+        SaveData data = JsonUtility.FromJson<SaveData>(json);
+        hightScore = data.hightScore;
+    }
+}
 
 
+    void Awake()
+    {
 
+   
+    
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(m_GameOver = true)
+        {
+            
+            if(timer > hightScore)    
+            {
+            hightScore = timer;
+            SaveInput();
+           }
+           
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         
     }
     public void StartGame()
-    {
+    {   ChestIsOpen = false;
         isGameActive = true;
         titleScreen.gameObject.SetActive(false);
-        InvokeRepeating("CountTimer", 0, 1);
+        InvokeRepeating("CounterTime", 0, 1);
         Instantiate(Player, spawnPos, Quaternion.identity);
         Instantiate(Chest, GenerateSpawnPosition(), Quaternion.identity);
+        m_GameOver = false;
     }
 
 
@@ -52,26 +105,30 @@ public class GameManager : MonoBehaviour
         return randomSpown;
     }
 //Counter time when game is started
-     private void CountTimer()
+     private void CounterTime()
     {
         if (isGameActive = true)
         {
+            
             timer ++;
+            //timer = time;
             timeText.text = "Time: " + timer;
         }
-        if(isGameActive = false)
+        else if(ChestIsOpen)
         {
+            
             GameOver();
         }
+
     }
 
     // Stop game, bring up game over text and restart button
     public void GameOver()
     {
-        
-        gameOverScreen.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
-       isGameActive = false; 
+     if(m_GameOver = true)
+        {gameOverScreen.gameObject.SetActive(true);
+            isGameActive = false; 
+        }
     }
 
     // Restart game by reloading the scene
@@ -79,4 +136,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void chestScreenRun()
+    {
+       
+       
+       if(ChestIsOpen = true)
+       {
+           chestScreen.gameObject.SetActive(true);
+       }
+       
+    }
+
 }
+
