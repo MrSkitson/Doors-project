@@ -66,12 +66,13 @@ public void LoadInput()
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if(m_GameOver = true)
         {
             
@@ -79,6 +80,7 @@ public void LoadInput()
             {
             hightScore = timer;
             SaveInput();
+
            }
            
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -111,14 +113,10 @@ public void LoadInput()
         {
             
             timer ++;
-            //timer = time;
+
             timeText.text = "Time: " + timer;
         }
-        else if(ChestIsOpen)
-        {
-            
-            GameOver();
-        }
+
 
     }
 
@@ -140,11 +138,7 @@ public void LoadInput()
     public void chestScreenRun()
     {
        
-       
-       if(ChestIsOpen = true)
-       {
-           chestScreen.gameObject.SetActive(true);
-       }
+        chestScreen.gameObject.SetActive(true);
        
     }
 

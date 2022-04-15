@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6020697c02ee402585b7f48b19ca395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChestIsOpen: 0
 --- !u!1 &3999348925112877424
 GameObject:
   m_ObjectHideFlags: 0

@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 3883205831451484788}
   - component: {fileID: 3854722254961787250}
   - component: {fileID: 3875555699075036958}
+  - component: {fileID: 8838777058132001375}
   m_Layer: 0
   m_Name: First Person Camera
   m_TagString: MainCamera
@@ -191,6 +192,22 @@ MonoBehaviour:
   character: {fileID: 3769820078326388320}
   sensitivity: 2
   smoothing: 1.5
+--- !u!114 &8838777058132001375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3772411876006459644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &3772484060288598866
 GameObject:
   m_ObjectHideFlags: 0
