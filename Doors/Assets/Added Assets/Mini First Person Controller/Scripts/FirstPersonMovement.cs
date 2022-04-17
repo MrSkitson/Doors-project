@@ -40,5 +40,14 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+        // if(Input.GetKey("Q"))
+        // {
+        //     transform.Rotate(Vector3.right * Time.deltaTime);
+        // }
+        // if(Input.GetKey("E"))
+        // {
+        //     transform.Rotate(-Vector3.right * Time.deltaTime);
+        // }
+        
     }
 }

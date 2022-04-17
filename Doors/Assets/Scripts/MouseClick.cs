@@ -9,18 +9,15 @@ using UnityEngine.EventSystems;
 public class MouseClick : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 
 {
-    public static MouseClick Instance;
-   public bool ChestIsOpen; 
+protected virtual void Touch()
+{
 
-  
-
-
-private GameManager gameManager;
+}
 
 public void Start()
 {
     
-   gameManager = GetComponent<GameManager>();
+
     
 }
 //Place for add light effect when courser come to Chest BoxCollider
@@ -39,10 +36,12 @@ public void OnPointerExit(PointerEventData pointerEvenetData)
 public void OnPointerDown(PointerEventData pointerEventData)
 {
 Debug.Log(" Game Object Clicked!");
-ChestIsOpen = true;
+Touch();
+
 // THis is a PROBLEM PLACE
 GameManager.Instance.chestScreenRun();
 }
+
 //Check when was click to Chest Box Collider
 public void OnPointerClick(PointerEventData pointerEventData)
     {

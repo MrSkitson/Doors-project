@@ -59,7 +59,6 @@ public void LoadInput()
     }
 }
 
-
     void Awake()
     {
 
@@ -69,7 +68,7 @@ public void LoadInput()
     // Start is called before the first frame update
     void Start()
     {
-       
+       Instance = this;
     }
 
     // Update is called once per frame
@@ -118,9 +117,7 @@ public void LoadInput()
     {
         if (isGameActive = true)
         {
-
             timer ++;
-
             timeText.text = "Time: " + timer;
         }
     }
@@ -142,10 +139,9 @@ public void LoadInput()
 
     public void chestScreenRun()
     {
-      if(MouseClick.Instance.ChestIsOpen = true) 
-        {   
+ 
             chestScreen.gameObject.SetActive(true);
-        }
+
     }
     public void OpenChest()
     {
@@ -161,7 +157,8 @@ public void LoadInput()
     public void NoButton()
     {
         chestScreen.gameObject.SetActive(false);
-        chestScreen.gameObject.SetActive(false);
+
+        keyPanel.gameObject.SetActive(false);
 
     }
 
