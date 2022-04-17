@@ -37,9 +37,7 @@ public void OnPointerDown(PointerEventData pointerEventData)
 {
 Debug.Log(" Game Object Clicked!");
 Touch();
-
-// THis is a PROBLEM PLACE
-GameManager.Instance.chestScreenRun();
+//GameManager.Instance.chestScreenRun();
 }
 
 //Check when was click to Chest Box Collider

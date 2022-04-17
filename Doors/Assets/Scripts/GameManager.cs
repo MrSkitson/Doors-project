@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public  GameObject Player, Chest;
+    public  GameObject Player, Chest, Door;
     Vector3 spawnPos;
     public TextMeshProUGUI timeText;
      public GameObject titleScreen;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     private bool isDourOpen;
     private bool haveKey;
     private int timer;
-    private float spawnRange = 4.0f;
+    private float spawnRange = 7.0f;
     public bool isGameActive;
    
 [System.Serializable]
@@ -61,23 +61,23 @@ public void LoadInput()
 
     void Awake()
     {
-
+Instance = this;
    
     
     }
     // Start is called before the first frame update
     void Start()
     {
-       Instance = this;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (isDourOpen)
-        {
-            m_GameOver = true;
-        }
+        // while (isDourOpen)
+        // {
+        //     m_GameOver = true;
+        // }
         if(m_GameOver = true)
         {
             
@@ -99,6 +99,7 @@ public void LoadInput()
         InvokeRepeating("CounterTime", 0, 1);
         Instantiate(Player, spawnPos, Quaternion.identity);
         Instantiate(Chest, GenerateSpawnPosition(), Quaternion.identity);
+        Instantiate(Door, GenerateSpawnPosition(), Quaternion.identity);
         m_GameOver = false;
         haveKey = false;
     }
@@ -124,11 +125,18 @@ public void LoadInput()
 
     // Stop game, bring up game over text and restart button
     public void GameOver()
-    {
-     if(m_GameOver = true)
-        {gameOverScreen.gameObject.SetActive(true);
-            isGameActive = false; 
+    {  
+        if(haveKey)
+        { 
+         m_GameOver = true;
+        isGameActive = false;
+        gameOverScreen.gameObject.SetActive(true);
         }
+        if(haveKey = false)
+        {
+            Debug.Log("Find a key");
+        }
+    
     }
 
     // Restart game by reloading the scene
@@ -139,14 +147,15 @@ public void LoadInput()
 
     public void chestScreenRun()
     {
- 
-            chestScreen.gameObject.SetActive(true);
+            chestScreen.gameObject.SetActive(true);  
 
     }
     public void OpenChest()
     {
          chestScreen.gameObject.SetActive(false);
          keyPanel.gameObject.SetActive(true);
+
+
     }
     public void TakeKey()
     {
