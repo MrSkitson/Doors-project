@@ -21,14 +21,17 @@ public class GameManager : MonoBehaviour
      public GameObject gameOverScreen;
      public Button startButton;
     public GameObject chestScreen;
+     public GameObject keyPanel;
     public bool ChestIsOpen;
     public int hightScore = 10;
     public Text hightScoreText;
     private bool m_GameOver;
-    private bool OpenDoor;
+    private bool isDourOpen;
+    private bool haveKey;
     private int timer;
     private float spawnRange = 4.0f;
     public bool isGameActive;
+   
 [System.Serializable]
     class SaveData
     {
@@ -72,7 +75,10 @@ public void LoadInput()
     // Update is called once per frame
     void Update()
     {
-
+        while (isDourOpen)
+        {
+            m_GameOver = true;
+        }
         if(m_GameOver = true)
         {
             
@@ -88,13 +94,14 @@ public void LoadInput()
         
     }
     public void StartGame()
-    {   ChestIsOpen = false;
+    {   
         isGameActive = true;
         titleScreen.gameObject.SetActive(false);
         InvokeRepeating("CounterTime", 0, 1);
         Instantiate(Player, spawnPos, Quaternion.identity);
         Instantiate(Chest, GenerateSpawnPosition(), Quaternion.identity);
         m_GameOver = false;
+        haveKey = false;
     }
 
 
@@ -111,13 +118,11 @@ public void LoadInput()
     {
         if (isGameActive = true)
         {
-            
+
             timer ++;
 
             timeText.text = "Time: " + timer;
         }
-
-
     }
 
     // Stop game, bring up game over text and restart button
@@ -137,9 +142,27 @@ public void LoadInput()
 
     public void chestScreenRun()
     {
-       
-        chestScreen.gameObject.SetActive(true);
-       
+      if(MouseClick.Instance.ChestIsOpen = true) 
+        {   
+            chestScreen.gameObject.SetActive(true);
+        }
+    }
+    public void OpenChest()
+    {
+         chestScreen.gameObject.SetActive(false);
+         keyPanel.gameObject.SetActive(true);
+    }
+    public void TakeKey()
+    {
+       keyPanel.gameObject.SetActive(false);
+       haveKey = true;
+    }
+
+    public void NoButton()
+    {
+        chestScreen.gameObject.SetActive(false);
+        chestScreen.gameObject.SetActive(false);
+
     }
 
 }
