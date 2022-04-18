@@ -16,21 +16,24 @@ public class GameManager : MonoBehaviour
     public  GameObject Player, Chest, Door;
     Vector3 spawnPos;
     public TextMeshProUGUI timeText;
-     public GameObject titleScreen;
-     public Button restartButton; 
-     public GameObject gameOverScreen;
-     public Button startButton;
-    public GameObject chestScreen;
-     public GameObject keyPanel;
-    public bool ChestIsOpen;
-    public int hightScore = 10;
-    public Text hightScoreText;
-    private bool m_GameOver;
-    private bool isDourOpen;
+     [SerializeField] private GameObject titleScreen;
+     [SerializeField] private Button restartButton; 
+    [SerializeField] private GameObject gameOverScreen;
+     [SerializeField] private Button startButton;
+   [SerializeField] private GameObject chestScreen;
+     [SerializeField] private GameObject keyPanel;
+   [SerializeField] private bool ChestIsOpen;
+   public int hightScore = 1;
+    [SerializeField] private Text hightScoreText;
+    [SerializeField] private Text currentScoreText;
+    private bool m_GameOver = false;
     private bool haveKey;
     private int timer;
     private float spawnRange = 7.0f;
-    public bool isGameActive;
+    [SerializeField] private bool isGameActive;
+    public int currentScore;
+
+    private float startTime;
    
 [System.Serializable]
     class SaveData
@@ -61,46 +64,28 @@ public void LoadInput()
 
     void Awake()
     {
-Instance = this;
-   
-    
+        Instance = this;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
     // Update is called once per frame
     void Update()
     {
-        // while (isDourOpen)
-        // {
-        //     m_GameOver = true;
-        // }
-        if(m_GameOver = true)
+        if(m_GameOver)
+        return;
+        if(isGameActive)
         {
-            
-            if(timer > hightScore)    
-            {
-            hightScore = timer;
-            SaveInput();
-
-           }
-           
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            CounterTime();
         }
-        
+
     }
     public void StartGame()
     {   
         isGameActive = true;
         titleScreen.gameObject.SetActive(false);
-        InvokeRepeating("CounterTime", 0, 1);
+        startTime = Time.time;
+       
         Instantiate(Player, spawnPos, Quaternion.identity);
         Instantiate(Chest, GenerateSpawnPosition(), Quaternion.identity);
         Instantiate(Door, GenerateSpawnPosition(), Quaternion.identity);
-        m_GameOver = false;
         haveKey = false;
     }
 
@@ -116,11 +101,12 @@ Instance = this;
 //Counter time when game is started
      private void CounterTime()
     {
-        if (isGameActive = true)
-        {
-            timer ++;
-            timeText.text = "Time: " + timer;
-        }
+        float t = Time.time - startTime;
+        string minutes = ((int) t / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
+        
+        timeText.text = minutes + ":" + seconds;
+
     }
 
     // Stop game, bring up game over text and restart button
@@ -128,10 +114,17 @@ Instance = this;
     {  
         if(haveKey)
         { 
-         m_GameOver = true;
+            timeText.color = Color.red;
+            currentScoreText.text = "Current Score: " + timeText.text;
         isGameActive = false;
+         m_GameOver = true;
+         if(isGameActive = false)    
+            {    
+            SaveInput();
+            }
         gameOverScreen.gameObject.SetActive(true);
         }
+        
         if(haveKey = false)
         {
             Debug.Log("Find a key");
