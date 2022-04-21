@@ -107,6 +107,7 @@ public void LoadInput()
         
         timeText.text = minutes + ":" + seconds;
 
+
     }
 
     // Stop game, bring up game over text and restart button
@@ -118,9 +119,13 @@ public void LoadInput()
             currentScoreText.text = "Current Score: " + timeText.text;
         isGameActive = false;
          m_GameOver = true;
+          SaveInput();
+
+          
          if(isGameActive = false)    
             {    
-            SaveInput();
+           LoadInput();
+            hightScoreText.text = "Hight Score: " + currentScore;
             }
         gameOverScreen.gameObject.SetActive(true);
         }

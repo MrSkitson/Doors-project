@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 477684}
   - component: {fileID: -3356028382762552729}
   - component: {fileID: -5590977606341097863}
+  - component: {fileID: 1216931540547313893}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d164b68937654a7d9c6329a2ddbef4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 1216931540547313893}
 --- !u!65 &-5590977606341097863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60,6 +62,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.98624134, z: 2.842505}
   m_Center: {x: 0, y: 0.40966153, z: -0.039636135}
+--- !u!95 &1216931540547313893
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129596}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 504a3044c0f4048ad8e4d778b7f04af1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &170426
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &472828
 Transform:
   m_ObjectHideFlags: 0
