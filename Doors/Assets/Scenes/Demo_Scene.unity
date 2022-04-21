@@ -4215,7 +4215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 3772231947104161224, guid: 53cb2907a1683407485e2903ff512720, type: 3}
-  Chest: {fileID: 129596, guid: 1ad60190470c8904c833f021be513271, type: 3}
+  Chest: {fileID: 129596, guid: d62fe9ee3b8d94d5c84d30a31b709c81, type: 3}
   Door: {fileID: 2453720682577926992, guid: 4982ec4eadadd4d54b00110ee1ba5e20, type: 3}
   timeText: {fileID: 331867315}
   titleScreen: {fileID: 936557055}
@@ -4227,7 +4227,7 @@ MonoBehaviour:
   ChestIsOpen: 0
   hightScore: 10
   hightScoreText: {fileID: 1586160872}
-  currentScoreText: {fileID: 0}
+  currentScoreText: {fileID: 224766498}
   isGameActive: 0
   currentScore: 0
 --- !u!4 &893991748

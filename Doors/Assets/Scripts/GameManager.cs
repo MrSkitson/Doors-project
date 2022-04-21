@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     private bool m_GameOver = false;
     private bool haveKey;
     private int timer;
-    private float spawnRange = 7.0f;
+    private float spawnRange = 5.0f;
     [SerializeField] private bool isGameActive;
     public int currentScore;
 
