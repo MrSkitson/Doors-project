@@ -127,6 +127,7 @@ public void LoadInput()
         
         if(haveKey = false)
         {
+            //Place for text on the screen  "Find a Key"
             Debug.Log("Find a key");
         }
     
@@ -138,24 +139,35 @@ public void LoadInput()
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    //Method for Chest script
     public void chestScreenRun()
     {
             chestScreen.gameObject.SetActive(true);  
 
     }
+
+    //Method for Button Yes in ChestScreen
     public void OpenChest()
     {
-         chestScreen.gameObject.SetActive(false);
-         keyPanel.gameObject.SetActive(true);
 
+         chestScreen.gameObject.SetActive(false);
+         // place for animator chestOpening
 
     }
+    
+    //Method for Key script
+    public void KeyClicked()
+    {
+        keyPanel.gameObject.SetActive(true);
+    }
+    //Method for Button Yes in keyPanel screen. 
     public void TakeKey()
     {
        keyPanel.gameObject.SetActive(false);
        haveKey = true;
+       //animation Key
     }
-
+    //Method for both No Button 
     public void NoButton()
     {
         chestScreen.gameObject.SetActive(false);
