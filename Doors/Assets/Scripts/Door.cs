@@ -7,6 +7,7 @@ public class Door : MouseClick
  protected override  void Touch()
  {
      GameManager.Instance.GameOver();
+     GameManager.Instance.FindKey();
  }
 
     
