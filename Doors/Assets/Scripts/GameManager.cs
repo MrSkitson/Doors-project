@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
    public int hightScore = 1;
     [SerializeField] private Text hightScoreText;
     [SerializeField] private Text currentScoreText;
+    [SerializeField] private Text findText;
     private bool m_GameOver = false;
     private bool haveKey;
     private int timer;
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
     public int currentScore;
 
     private float startTime;
+
    
 [System.Serializable]
     class SaveData
@@ -82,11 +84,12 @@ public void LoadInput()
         isGameActive = true;
         titleScreen.gameObject.SetActive(false);
         startTime = Time.time;
-       
         Instantiate(Player, spawnPos, Quaternion.identity);
         Instantiate(Chest, GenerateSpawnPosition(), Quaternion.identity);
         Instantiate(Door, GenerateSpawnPosition(), Quaternion.identity);
         haveKey = false;
+        ChestIsOpen = false;
+        findText.gameObject.SetActive(false);
     }
 
 
@@ -110,6 +113,8 @@ public void LoadInput()
 
     }
 
+
+
     // Stop game, bring up game over text and restart button
     public void GameOver()
     {  
@@ -129,12 +134,13 @@ public void LoadInput()
             }
         gameOverScreen.gameObject.SetActive(true);
         }
-        
-        if(haveKey = false)
-        {
+    }
+    public void FindKey()
+    {
+
             //Place for text on the screen  "Find a Key"
             Debug.Log("Find a key");
-        }
+            findText.gameObject.SetActive(true);
     
     }
 
@@ -148,22 +154,28 @@ public void LoadInput()
     public void chestScreenRun()
     {
             chestScreen.gameObject.SetActive(true);  
+;
 
     }
 
     //Method for Button Yes in ChestScreen
     public void OpenChest()
     {
-
          chestScreen.gameObject.SetActive(false);
          // place for animator chestOpening
+
+         ChestIsOpen = true;
 
     }
     
     //Method for Key script
     public void KeyClicked()
     {
-        keyPanel.gameObject.SetActive(true);
+        if(ChestIsOpen = true)
+        {
+            keyPanel.gameObject.SetActive(true);
+            findText.gameObject.SetActive(false);
+        }
     }
     //Method for Button Yes in keyPanel screen. 
     public void TakeKey()
@@ -182,4 +194,5 @@ public void LoadInput()
     }
 
 }
+
 

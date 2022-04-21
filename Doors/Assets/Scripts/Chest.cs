@@ -9,16 +9,21 @@ public class Chest : MouseClick
     
 public void chestAnimation()
 {
-    _animator = GetComponent<Animator>();
-    _animator.SetBool("IsOpen",_isOpen);
-    _isOpen = !_isOpen;
 
+_animator = GetComponent<Animator>();
+    _animator.SetBool("IsOpen", _isOpen);
+    _isOpen = !_isOpen;
+    
+
+    
 }
 
  protected override  void Touch()
  {
+      
      GameManager.Instance.chestScreenRun();
-     
+
+     chestAnimation();
  }
 
     
