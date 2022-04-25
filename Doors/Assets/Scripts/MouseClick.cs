@@ -9,6 +9,8 @@ using UnityEngine.EventSystems;
 public class MouseClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 
 {
+
+
 protected virtual void Touch()
 {
 
@@ -17,13 +19,16 @@ protected virtual void Touch()
 public void Start()
 {
     
-
-    
 }
+
+
+
 //Place for add light effect when courser come to Chest BoxCollider
 public void OnPointerEnter(PointerEventData pointerEvenetData)
 {
     Debug.Log("Change light");
+//     Material mat = Text.materialForRendering;
+// Debug.Log(mat.GetFloat("_GlowPower"));
 
 }
 

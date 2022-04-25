@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -3356028382762552729}
   - component: {fileID: -5590977606341097863}
   - component: {fileID: 1216931540547313893}
+  - component: {fileID: 8094986655810954535}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -81,6 +82,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8094986655810954535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &170426
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973940054894471744, guid: 63a30471c60d2473ea00fb82900430f4, type: 3}
       propertyPath: m_Size.x
-      value: 0.12193367
+      value: 0.21899407
       objectReference: {fileID: 0}
     - target: {fileID: 8973940054894471744, guid: 63a30471c60d2473ea00fb82900430f4, type: 3}
       propertyPath: m_Size.y
@@ -320,19 +339,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973940054894471744, guid: 63a30471c60d2473ea00fb82900430f4, type: 3}
       propertyPath: m_Size.z
-      value: 0.32866785
+      value: 0.2037061
       objectReference: {fileID: 0}
     - target: {fileID: 8973940054894471744, guid: 63a30471c60d2473ea00fb82900430f4, type: 3}
       propertyPath: m_Center.x
-      value: -0.0000000971817
+      value: 0.004083188
       objectReference: {fileID: 0}
     - target: {fileID: 8973940054894471744, guid: 63a30471c60d2473ea00fb82900430f4, type: 3}
       propertyPath: m_Center.y
-      value: 0.048876207
+      value: 0.04887621
       objectReference: {fileID: 0}
     - target: {fileID: 8973940054894471744, guid: 63a30471c60d2473ea00fb82900430f4, type: 3}
       propertyPath: m_Center.z
-      value: -0.012277435
+      value: 0.0502033
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a30471c60d2473ea00fb82900430f4, type: 3}

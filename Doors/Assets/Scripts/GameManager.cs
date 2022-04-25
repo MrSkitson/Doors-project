@@ -75,7 +75,7 @@ public void LoadInput()
         return;
         if(isGameActive)
         {
-            CounterTime();
+           CounterTime();
         }
 
     }
@@ -109,10 +109,8 @@ public void LoadInput()
         string seconds = (t % 60).ToString("f2");
         
         timeText.text = minutes + ":" + seconds;
-
-
+        
     }
-
 
 
     // Stop game, bring up game over text and restart button
